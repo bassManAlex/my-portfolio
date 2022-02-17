@@ -1,0 +1,92 @@
+$defaultPadding: 20px;
+$bgColor: #3f51b5;
+$borderColor: #9d9d9d;
+$labelColor: #6c6c6c;
+
+header {
+  font-size: 2em;
+  line-height: 65px;
+  height: 65px;
+  background-color: $bgColor;
+  color: #ffffff;
+  padding-left: $defaultPadding;
+}
+
+.page-container {
+  position: relative;
+  padding: $defaultPadding;
+
+  .user-container {
+    .user-card {
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid $borderColor;
+      border-radius: 12px;
+      padding: $defaultPadding;
+      display: flex;
+
+      .picture {
+        width: 150px;
+        flex: 1;
+        img {
+          width: 150px;
+          border-radius: 50%;
+        }
+      }
+      .info {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+
+        > div {
+          height: 60px;
+
+          &:first-of-type {
+            border-bottom: 1px solid $borderColor;
+          }
+          &:not(:first-of-type) {
+            padding-top: 20px;
+          }
+
+          .label {
+            color: $labelColor;
+            font-size: 1.3em;
+          }
+          .value {
+            font-size: 1.3em;
+            font-weight: 700;
+          }
+        }
+
+      }
+    }
+
+    .toolbox {
+      min-width: 320px;
+      max-width: 460px;
+      padding-top: $defaultPadding;
+
+      display: flex;
+      justify-content: space-around;
+      mat-icon {
+        font-size: 3em;
+        color: $borderColor;
+
+        &:hover {
+          color: initial;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .error-message {
+    padding: $defaultPadding;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    background-color: #b40c0c;
+    color: #ffffff;
+    border-radius: 12px;
+  }
+}
